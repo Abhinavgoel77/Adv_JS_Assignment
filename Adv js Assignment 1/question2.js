@@ -67,11 +67,11 @@ const extractData = async (info) => {
    return lists; 
 }
 
-const myFunction = async() => {
+ myFunction = async() => {
     let query = $("input").val();
-    console.log(query)
+    // console.log(query)
     url = 'https://api.github.com/search/repositories?q=' + query;  
-    fetch(url)                                                              // fetching the data from api
+     await fetch(url)                                                              // fetching the data from api
     .then( (apidata) => {
         return apidata.json();
     })
